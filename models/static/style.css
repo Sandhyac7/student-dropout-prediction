@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-box {
+    margin: 20px auto;
+}
+
+input {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #ff7a18;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #ff4b2b;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+    height: 10px;
+    margin: 10px 0;
+}
+
+.progress {
+    background: linear-gradient(to right, #ff7a18, #ff4b2b);
+    height: 10px;
+    border-radius: 10px;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+}
+
+.high {
+    color: red;
+    font-weight: bold;
+}

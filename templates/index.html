@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dropout Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Student Dropout Prediction System</h1>
+
+    <form action="/predict" method="POST" class="form-box">
+        <input type="number" name="attendance" placeholder="Attendance (%)" required>
+        <input type="number" name="marks" placeholder="Marks (%)" required>
+        <input type="number" name="study_hours" placeholder="Study Hours / Day" required>
+
+        <button type="submit">🚀 Predict Risk</button>
+    </form>
+
+    {% if predictions %}
+    <div class="results">
+        <h2>📊 Prediction Results</h2>
+
+        <div class="card-container">
+            {% for model, value in predictions.items() %}
+
+            <div class="card">
+                <h3>{{ model }}</h3>
+
+                <div class="progress-bar">
+                    <div class="progress" style="width: {{ value }}%"></div>
+                </div>
+
+                <p>{{ value }}% Risk</p>
+
+                {% if value < 30 %}
+                    <span class="low">Low Risk</span>
+                {% elif value < 70 %}
+                    <span class="medium">Medium Risk</span>
+                {% else %}
+                    <span class="high">High Risk</span>
+                {% endif %}
+
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
